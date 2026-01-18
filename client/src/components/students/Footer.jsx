@@ -15,7 +15,8 @@ const Footer = () => {
             WiseUp — Empowering learners through expert-led, accessible education."
           </p>
         </div>
-        <div className='flex flex-col items-center md:items-start w-full'>
+        <div className='fl
+        ex flex-col items-center md:items-start w-full'>
           <h2 className='font-semibold text-white mb-5'> Company</h2>
           <ul className='flex md:flex-col w-full justify-between text-sm text-white/80 md:space-y-2'>
             <li><a href="#">Home</a></li>
