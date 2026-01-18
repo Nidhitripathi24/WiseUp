@@ -42,6 +42,12 @@
 
 ### Key Highlights
 
+## 🌐 Live Demo
+
+- **Frontend (Client):** [https://wise-up-client.vercel.app/](https://wise-up-client.vercel.app/)
+- **Backend (Server):** [https://wise-up-server.vercel.app/](https://wise-up-server.vercel.app/)
+
+
 - 🎨 **Modern Dark Theme UI** - Professional black background with elegant white text and blue accents
 - 🔐 **Secure Authentication** - Powered by Clerk for robust user management
 - 💳 **Payment Integration** - Seamless course purchases via Stripe
