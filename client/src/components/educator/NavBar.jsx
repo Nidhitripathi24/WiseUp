@@ -1,22 +1,41 @@
-import {assets, dummyEducatorData} from "../../assets/assets"
-import {UserButton, useUser} from "@clerk/clerk-react"
-import {Link} from 'react-router-dom'
 
-const NavBar = () => {
-  const educatorData = dummyEducatorData
-  const {user} = useUser()
-
+const Footer = () => {
   return (
-    <div className="flex items-center justify-between px-4 md:px-8 border border-gray-500 py-1">
-      <Link to='/'>
-        <img src={assets.logo} alt="logo" className="w-18 lg:w-22" />
-      </Link>
-      <div className="flex items-center gap-3">
-        <p>Hi!! {user ? user.fullName : "Developers"}</p>
-        {user ? <UserButton /> : <img src={assets.profile_img} alt="" className="max-w-8" />}
+    <footer className='bg-gray-700 md:px-36 text-left w-full mt-10'>
+      <div className='flex flex-col md:flex-row items-start px-8 md:px-0 justify-center gap-10 md:gap-32 py-10 border-b border-white/30'>
+        <div className='flex flex-col md:items-start items-center w-full'>
+
+          {/* Replaced Logo Image with Text - White color for dark background */}
+          <h1 className="text-3xl font-bold text-white mb-3 -mt-7 font-['Poppins']">
+            WiseUp
+          </h1>
+
+          <p className='mt-8 text-center md:text-left text-sm text-white/80'>
+            WiseUp — Empowering learners through expert-led, accessible education."
+          </p>
+        </div>
+        <div className='flex flex-col items-center md:items-start w-full'>
+          <h2 className='font-semibold text-white mb-5'> Company</h2>
+          <ul className='flex md:flex-col w-full justify-between text-sm text-white/80 md:space-y-2'>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+        <div className='hidden md:flex flex-col items-start w-full'>
+          <h2 className='font-semibold text-white mb-5'>Subscribe to our Newsletter</h2>
+          <p className='text-sm text-white/80'>The latest news, articles and resources, sent to your inbox weekly</p>
+          <div className='flex items-center gap-2 pt-4'>
+            <input
+              className='border border-gray-500/30 bg-gray-800 text-gray-500 placeholder-gray-500 outline-none w-64 h-9 rounded px-2 text-sm'
+              type="email" placeholder='Enter your email' />
+            <button className='bg-blue-600 w-24 h-9 text-white rounded'>Subscribe</button>
+          </div>
+        </div>
       </div>
-    </div>
+      <p className='py-4 text-center text-xs md:text-sm text-white/60'>Copyright © 2025 WiseUp. All rights reserved.</p>
+    </footer>
   )
 }
 
-export default NavBar
+export default Footer

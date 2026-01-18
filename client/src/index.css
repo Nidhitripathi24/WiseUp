@@ -3,19 +3,76 @@
 
 /* Tailwind CSS v4.0 Configuration */
 @theme {
+  /* ========================================
+     CENTRALIZED THEME COLORS
+     Change these values to customize the entire UI theme
+     ======================================== */
+
+  /* Primary Background Colors */
+  --color-bg-primary: #000000;
+  /* Main background (pure black) */
+  --color-bg-secondary: #111827;
+  /* Secondary background (gray-900) */
+  --color-bg-tertiary: #1f2937;
+  /* Tertiary background (gray-800) */
+  --color-bg-card: rgba(17, 24, 39, 0.5);
+  /* Card background (gray-900/50) */
+  --color-bg-card-hover: #111827;
+  /* Card hover state */
+
+  /* Text Colors */
+  --color-text-primary: #ffffff;
+  /* Primary text (white) */
+  --color-text-secondary: #d1d5db;
+  /* Secondary text (gray-300) */
+  --color-text-tertiary: #9ca3af;
+  /* Tertiary text (gray-400) */
+
+  /* Accent Colors */
+  --color-accent-primary: #2563eb;
+  /* Primary accent (blue-600) */
+  --color-accent-hover: #1d4ed8;
+  /* Accent hover (blue-700) */
+  --color-accent-light: #60a5fa;
+  /* Light accent (blue-400) */
+  --color-accent-lighter: #3b82f6;
+  /* Lighter accent (blue-500) */
+
+  /* Border Colors */
+  --color-border-primary: #374151;
+  /* Primary border (gray-700) */
+  --color-border-secondary: #4b5563;
+  /* Secondary border (gray-600) */
+
+  /* Special Background Colors */
+  --color-bg-navbar: #000000;
+  /* Navbar background */
+  --color-bg-navbar-alt: #111827;
+  /* Navbar alternate background */
+  --color-bg-footer: #374151;
+  /* Footer background (gray-700) */
+  --color-bg-hero-from: #111827;
+  /* Hero gradient start (gray-900) */
+  --color-bg-hero-to: #000000;
+  /* Hero gradient end (black) */
+
+  /* ========================================
+     FONT SIZES & LAYOUT
+     ======================================== */
+
   /* Custom Font Sizes with Line Heights */
   --font-size-course-details-heading-small: 26px;
   --font-size-course-details-heading-small--line-height: 36px;
-  
+
   --font-size-course-details-heading-large: 36px;
   --font-size-course-details-heading-large--line-height: 44px;
-  
+
   --font-size-home-heading-small: 28px;
   --font-size-home-heading-small--line-height: 34px;
-  
+
   --font-size-home-heading-large: 48px;
   --font-size-home-heading-large--line-height: 56px;
-  
+
   --font-size-default: 15px;
   --font-size-default--line-height: 21px;
 
@@ -24,59 +81,143 @@
   --spacing-section-height: 500px;
   --max-width-course-card: 424px;
   --box-shadow-custom-card: 0px 4px 15px 2px rgba(0, 0, 0, 0.1);
-  --spacing-30: 7.5rem; /* 120px */
+  --spacing-30: 7.5rem;
+  /* 120px */
 }
 
 /* Custom utility classes */
 @layer utilities {
+  /* ========================================
+     THEME-BASED UTILITY CLASSES
+     These classes use the centralized color variables above
+     ======================================== */
+
+  /* Background utilities */
+  .bg-theme-primary {
+    background-color: var(--color-bg-primary);
+  }
+
+  .bg-theme-secondary {
+    background-color: var(--color-bg-secondary);
+  }
+
+  .bg-theme-tertiary {
+    background-color: var(--color-bg-tertiary);
+  }
+
+  .bg-theme-card {
+    background-color: var(--color-bg-card);
+  }
+
+  .bg-theme-card-hover:hover {
+    background-color: var(--color-bg-card-hover);
+  }
+
+  .bg-theme-navbar {
+    background-color: var(--color-bg-navbar);
+  }
+
+  .bg-theme-footer {
+    background-color: var(--color-bg-footer);
+  }
+
+  .bg-theme-hero {
+    background: linear-gradient(to bottom, var(--color-bg-hero-from), var(--color-bg-hero-to));
+  }
+
+  /* Text color utilities */
+  .text-theme-primary {
+    color: var(--color-text-primary);
+  }
+
+  .text-theme-secondary {
+    color: var(--color-text-secondary);
+  }
+
+  .text-theme-tertiary {
+    color: var(--color-text-tertiary);
+  }
+
+  .text-theme-accent {
+    color: var(--color-accent-light);
+  }
+
+  /* Border utilities */
+  .border-theme-primary {
+    border-color: var(--color-border-primary);
+  }
+
+  .border-theme-secondary {
+    border-color: var(--color-border-secondary);
+  }
+
+  /* Button utilities */
+  .btn-theme-primary {
+    background-color: var(--color-accent-primary);
+    color: var(--color-text-primary);
+  }
+
+  .btn-theme-primary:hover {
+    background-color: var(--color-accent-hover);
+  }
+
+  /* ========================================
+     TYPOGRAPHY UTILITIES
+     ======================================== */
+
   .text-course-details-heading-small {
     font-size: 26px;
     line-height: 36px;
   }
-  
+
   .text-course-details-heading-large {
     font-size: 36px;
     line-height: 44px;
   }
-  
+
   .text-home-heading-small {
     font-size: 28px;
     line-height: 34px;
   }
-  
+
   .text-home-heading-large {
     font-size: 48px;
     line-height: 56px;
   }
-  
+
   .text-default {
     font-size: 15px;
     line-height: 21px;
   }
 
-  /* Custom layout utilities */
+  /* ========================================
+     LAYOUT UTILITIES
+     ======================================== */
+
   .grid-cols-auto {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
-  
+
   .h-section {
     height: 500px;
   }
-  
+
   .max-w-course-card {
     max-width: 424px;
   }
-  
+
   .shadow-custom-card {
     box-shadow: 0px 4px 15px 2px rgba(0, 0, 0, 0.1);
   }
-  
+
   .p-30 {
-    padding: 7.5rem; /* 120px */
+    padding: 7.5rem;
+    /* 120px */
   }
-  
+
   .m-30 {
-    margin: 7.5rem; /* 120px */
+    margin: 7.5rem;
+    /* 120px */
   }
 }
 
@@ -85,11 +226,11 @@
   * {
     font-family: 'Outfit', sans-serif;
   }
-  
+
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
     font-family: 'Outfit', sans-serif;
     font-size: 15px;
@@ -97,10 +238,11 @@
   }
 }
 
-/* Rich text editor styles */
+/* Rich text editor styles - Dark Theme */
 .rich-text {
   font-size: 15px;
-  color: #7A7B7D;
+  color: #d1d5db;
+  /* gray-300 */
 }
 
 .rich-text p {
@@ -110,42 +252,48 @@
 .rich-text h1 {
   font-size: 36px;
   font-weight: 800;
-  color: #252525;
+  color: #ffffff;
+  /* white */
   margin: 32px 0;
 }
 
 .rich-text h2 {
   font-size: 22px;
   font-weight: 700;
-  color: #252525;
+  color: #ffffff;
+  /* white */
   margin: 24px 0;
 }
 
 .rich-text h3 {
   font-size: 18px;
   font-weight: 600;
-  color: #333333;
+  color: #f3f4f6;
+  /* gray-100 */
   margin: 20px 0;
 }
 
 .rich-text h4 {
   font-size: 16px;
   font-weight: 500;
-  color: #444444;
+  color: #e5e7eb;
+  /* gray-200 */
   margin: 16px 0;
 }
 
 .rich-text h5 {
   font-size: 14px;
   font-weight: 400;
-  color: #555555;
+  color: #d1d5db;
+  /* gray-300 */
   margin: 12px 0;
 }
 
 .rich-text h6 {
   font-size: 12px;
   font-weight: 400;
-  color: #666666;
+  color: #9ca3af;
+  /* gray-400 */
   margin: 8px 0;
 }
 

@@ -22,7 +22,7 @@ export const updateRoleToEducator = async (req, res) => {
     console.log("Simulating role update...");
     await new Promise(res => setTimeout(res, 500));
     
-    res.json({ success: true, message: 'You can publish a course now (mocked)' });
+    res.json({ success: true, message: 'You can publish a course now ' });
   } catch (error) {
     console.error("Update role error:", error);
     res.json({ success: false, message: error.message });
