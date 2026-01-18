@@ -1,0 +1,12 @@
+{
+    "name": "lms-monorepo",
+    "version": "1.0.0",
+    "private": true,
+    "workspaces": [
+        "client",
+        "Server"
+    ],
+    "scripts": {
+        "dev": "npm run dev --workspaces"
+    }
+}

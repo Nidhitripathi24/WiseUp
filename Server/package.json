@@ -1,5 +1,5 @@
 {
-  "name": "y",
+  "name": "@lms/server",
   "version": "1.0.0",
   "description": "A learning Management System",
   "main": "server.js",
